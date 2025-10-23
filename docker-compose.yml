@@ -33,7 +33,7 @@ services:
     volumes:
       - grafana-data:/var/lib/grafana
     networks:
-      - app-network	
+      - app-network
   clickhouse:
     image: clickhouse/clickhouse-server:24.8
     restart: always

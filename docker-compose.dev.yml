@@ -6,7 +6,12 @@ services:
       target: build
     command: pnpm run start:dev
     volumes:
-      - ./:/app
+      - ./src:/app/src
+      - ./package.json:/app/package.json
+      - ./tsconfig.json:/app/tsconfig.json
+      - ./tsconfig.build.json:/app/tsconfig.build.json
+      - ./nest-cli.json:/app/nest-cli.json
       - /app/node_modules
       - /app/certs
       - /app/schemas
+      - /app/dist
